@@ -75,7 +75,6 @@ router.post("/signup", (req, res, next) => {
 
 // POST  /auth/login
 router.post("/login", (req, res, next) => {
-  console.log("hey");
   const { email, password } = req.body;
   if (email === "" || password === "") {
     res.status(400).json({ message: "Provide email and password." });
@@ -113,7 +112,6 @@ router.post("/login", (req, res, next) => {
 });
 
 router.get("/verify", isAuthenticated, (req, res, next) => {
-  // console.log(`req.payload`, req.payload);
   res.status(200).json(req.payload);
 });
 
