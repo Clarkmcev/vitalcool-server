@@ -10,7 +10,7 @@ const userSchema = new Schema(
     email: { type: String, unique: true, required: true },
     password: { type: String, required: true },
     basket: [{ type: Schema.Types.ObjectId, ref: "Beverage" }],
-    isAdmin: { type: Boolean, default: true },
+    isAdmin: { type: Boolean, default: false },
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
