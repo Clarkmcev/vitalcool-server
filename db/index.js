@@ -7,6 +7,8 @@ const mongoose = require("mongoose");
 
 const MONGO_URI =
   process.env.MONGODB_URI || "mongodb://localhost/vitalcool-server";
+// const MONGO_URI =
+//   "mongodb+srv://mcevoyclark:VNYeLZE3U04xKg3A@cluster0.vsj653m.mongodb.net/Vitalcool-server?retryWrites=true&w=majority";
 
 mongoose
   .connect(MONGO_URI)
