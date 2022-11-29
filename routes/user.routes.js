@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const Beverage = require("../models/Beverage.model");
 const User = require("../models/User.model");
 ObjectId = require("mongodb");
 const Order = require("../models/Order.model");
@@ -41,6 +42,13 @@ router.post("/new-order", (req, res, next) => {
         res.status(200);
       })
       .catch((err) => console.log(err));
+  });
+});
+
+router.get("/drinks/:id", (req, res, next) => {
+  const { id } = req.params;
+  Beverage.findById(id).then((drink) => {
+    res.status(200).json({ drink });
   });
 });
 
