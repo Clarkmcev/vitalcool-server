@@ -4,11 +4,6 @@ const { Schema, model } = require("mongoose");
 const beverageSchema = new Schema(
   {
     name: { type: String, required: true },
-    type: {
-      type: String,
-      enum: ["Soft", "Liquor", "Undistilled"],
-      required: true,
-    },
     softType: {
       type: String,
       enum: ["Juice", "Soda"],
@@ -21,7 +16,7 @@ const beverageSchema = new Schema(
       type: String,
       enum: ["Beer", "Wine", "Cider", "Mead", "Sake"],
     },
-    price: { type: Number, required: true },
+    price: { type: Number },
     imageUrl: { type: String },
     quantity: { type: Number, required: true },
     alcoholPercentage: { type: Number },

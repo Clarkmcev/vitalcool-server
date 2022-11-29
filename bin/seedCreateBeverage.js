@@ -5,103 +5,88 @@ require("../db");
 
 const beverages = [
   {
-    name: "Coca-cola",
-    type: "Undistilled",
-    softType: "Soda",
-    price: 2.0,
+    name: "Cuba Libre",
+    price: 1,
     quantity: 33.0,
     imageUrl:
-      "https://res.cloudinary.com/societe-generale/image/upload/v1662988212/movie-gallery/Pngtree_drink_icon_4690686_kwcpw3.png",
+      "https://res.cloudinary.com/societe-generale/image/upload/v1669709483/movie-gallery/Untitled-4-Recovered_0011_Layer-12_msf29p.png",
   },
   {
-    name: "1664 White",
-    type: "Undistilled",
-    undistilledType: "Beer",
-    price: 2.5,
+    name: "Moscow Mule",
+    price: 2,
     quantity: 33.0,
     imageUrl:
-      "https://res.cloudinary.com/societe-generale/image/upload/v1662988212/movie-gallery/Pngtree_drink_icon_4690686_kwcpw3.png",
+      "https://res.cloudinary.com/societe-generale/image/upload/v1669709484/movie-gallery/Untitled-4-Recovered_0012_Layer-1_tjrtqt.png",
   },
   {
-    name: "Jack-Daniels ",
-    type: "Liquor",
-    alcoholType: "Whiskey",
-    price: 24.99,
+    name: "Blue Lagoon",
+    price: 3,
     quantity: 75.0,
     imageUrl:
-      "https://res.cloudinary.com/societe-generale/image/upload/v1662988212/movie-gallery/Pngtree_drink_icon_4690686_kwcpw3.png",
+      "https://res.cloudinary.com/societe-generale/image/upload/v1669709483/movie-gallery/Untitled-4-Recovered_0010_Layer-13_chcb6w.png",
   },
   {
-    name: "Sun magic",
-    type: "Soft",
-    softType: "Juice",
-    price: 3.0,
+    name: "Strawberry Margarita",
+    price: 4,
     quantity: 25.0,
     imageUrl:
-      "https://res.cloudinary.com/societe-generale/image/upload/v1662988212/movie-gallery/Pngtree_drink_icon_4690686_kwcpw3.png",
+      "https://res.cloudinary.com/societe-generale/image/upload/v1669709483/movie-gallery/Untitled-4-Recovered_0008_Layer-9_oh3wv5.png",
   },
   {
-    name: "Absolute Vodka",
-    type: "Liquor",
-    alcoholType: "Vodka",
-    price: 17.99,
+    name: "Tequila Sunrise",
+    price: 5,
     quantity: 75.0,
     imageUrl:
-      "https://res.cloudinary.com/societe-generale/image/upload/v1662988212/movie-gallery/Pngtree_drink_icon_4690686_kwcpw3.png",
+      "https://res.cloudinary.com/societe-generale/image/upload/v1669709483/movie-gallery/Untitled-4-Recovered_0007_Layer-10_csixtt.png",
   },
   {
-    name: "Best Vodka",
-    type: "Liquor",
-    alcoholType: "Vodka",
-    price: 20.0,
-    quantity: 150.0,
-    imageUrl:
-      "https://res.cloudinary.com/societe-generale/image/upload/v1662988212/movie-gallery/Pngtree_drink_icon_4690686_kwcpw3.png",
-  },
-  {
-    name: "Pastis",
-    type: "Liquor",
-    alcoholType: "Vodka",
-    price: 22.0,
+    name: "Dirty Martini",
+    price: 6,
     quantity: 125.0,
     imageUrl:
-      "https://res.cloudinary.com/societe-generale/image/upload/v1662988212/movie-gallery/Pngtree_drink_icon_4690686_kwcpw3.png",
+      "https://res.cloudinary.com/societe-generale/image/upload/v1669709482/movie-gallery/Untitled-4-Recovered_0006_Layer-11_kpdcik.png",
   },
   {
-    name: "Sprite",
-    type: "Soft",
-    softType: "Soda",
-    price: 10.0,
+    name: "Manhattan",
+    price: 7,
     quantity: 100.0,
     imageUrl:
-      "https://res.cloudinary.com/societe-generale/image/upload/v1662988212/movie-gallery/Pngtree_drink_icon_4690686_kwcpw3.png",
+      "https://res.cloudinary.com/societe-generale/image/upload/v1669709482/movie-gallery/Untitled-4-Recovered_0005_Layer-3_xzftbk.png",
   },
   {
-    name: "Fanta Orange",
-    type: "Soft",
-    softType: "Soda",
-    price: 24.0,
+    name: "Long Island",
+    price: 8,
     quantity: 120.0,
     imageUrl:
-      "https://res.cloudinary.com/societe-generale/image/upload/v1662988212/movie-gallery/Pngtree_drink_icon_4690686_kwcpw3.png",
+      "https://res.cloudinary.com/societe-generale/image/upload/v1669709482/movie-gallery/Untitled-4-Recovered_0003_Layer-5_opauyi.png",
   },
   {
-    name: "Lemon Juice",
-    type: "Soft",
-    softType: "Juice",
-    price: 7.0,
+    name: "Sex on the beach",
+    price: 9,
     quantity: 75.0,
     imageUrl:
-      "https://res.cloudinary.com/societe-generale/image/upload/v1662988212/movie-gallery/Pngtree_drink_icon_4690686_kwcpw3.png",
+      "https://res.cloudinary.com/societe-generale/image/upload/v1669709481/movie-gallery/3_s36fwx.png",
   },
   {
-    name: "Pineapple Juice",
-    type: "Soft",
-    softType: "Juice",
-    price: 11.0,
-    quantity: 79.0,
+    name: "Tom Collins",
+    price: 10,
+    quantity: 75.0,
     imageUrl:
-      "https://res.cloudinary.com/societe-generale/image/upload/v1662988212/movie-gallery/Pngtree_drink_icon_4690686_kwcpw3.png",
+      "https://res.cloudinary.com/societe-generale/image/upload/v1669709482/movie-gallery/Untitled-4-Recovered_0004_Layer-4_ydwkoi.png",
+  },
+  {
+    name: "Pina Colada",
+    price: 11,
+    quantity: 75.0,
+    imageUrl:
+      "https://res.cloudinary.com/societe-generale/image/upload/v1669709481/movie-gallery/2_u4sni9.png",
+  },
+  {
+    name: "Grey Hound",
+    price: 12,
+    quantity: 75.0,
+    imageUrl:
+      "https://res.cloudinary.com/societe-generale/image/upload/v1669709481/movie-gallery/1_l0e8yx.png",
   },
 ];
 
