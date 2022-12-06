@@ -4,7 +4,7 @@ const { Schema, model } = require("mongoose");
 const beverageSchema = new Schema(
   {
     name: { type: String, required: true },
-    price: { type: Number },
+    price: { type: Number, unique: false },
     imageUrl: { type: String },
     quantity: { type: Number, required: true },
     mainAlcohol: { type: String },

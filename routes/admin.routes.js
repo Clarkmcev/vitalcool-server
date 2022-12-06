@@ -5,35 +5,34 @@ const fileUploader = require("../config/cloudinary.config");
 
 router.post("/new", (req, res, next) => {
   let { price } = req.body;
-  const { name, type, quantity, imageUrl } = req.body;
+  const {
+    name,
+    type,
+    quantity,
+    imageUrl,
+    description,
+    ingredients,
+    mainAlcohol,
+  } = req.body;
 
-  let { softType, alcoholType, undistilledType } = req.body;
-  if (softType !== "") {
-    Beverage.create({
-      name,
-      type,
-      softType,
-      quantity,
-      price,
-      imageUrl,
-    })
-      .then(() => {
-        res.status(201).json("Success");
-      })
-      .catch((err) => console.log(err));
-  } else if (alcoholType !== "") {
-    Beverage.create({ name, type, alcoholType, quantity, price, imageUrl })
-      .then(() => {
-        res.status(201).json("Success");
-      })
-      .catch((err) => console.log(err));
-  } else if (undistilledType !== "") {
-    Beverage.create({ name, type, undistilledType, quantity, price, imageUrl })
-      .then(() => {
-        res.status(201).json("Success");
-      })
-      .catch((err) => console.log(err));
+  if (name === "" || quantity === "" || ingredients === "") {
+    res.status(400).json({ message: "Some entries are missing." });
+    return;
   }
+
+  Beverage.create({
+    name,
+    type,
+    mainAlcohol,
+    quantity,
+    price,
+    imageUrl,
+    ingredients,
+  })
+    .then(() => {
+      res.status(201).json("Success");
+    })
+    .catch((err) => console.log(err));
 });
 
 router.post("/upload", fileUploader.single("imageUrl"), (req, res, next) => {
